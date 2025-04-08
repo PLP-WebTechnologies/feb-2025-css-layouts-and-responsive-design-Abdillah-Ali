@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Flexbox Layout</title>
+  <style>
+    /* Global styling */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1; /* Light background color */
+      color: #333; /* Dark text color for contrast */
+    }
+
+    /* Navigation Bar Styling */
+    nav {
+      background-color: #2C3E50; /* Deep blue color */
+      color: #ecf0f1; /* Light text color */
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #ecf0f1; /* Light color for links */
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #3498db; /* Blue color on hover */
+    }
+
+    /* Flexbox Layout */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .container > div {
+      flex: 1;
+      padding: 20px;
+      margin: 10px;
+      background-color: #ffffff; /* White background for content */
+      border-radius: 8px; /* Rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+      transition: transform 0.3s ease; /* Smooth hover effect */
+    }
+
+    .container > div:hover {
+      transform: translateY(-10px); /* Slight lift effect on hover */
+    }
+
+    /* Styling for headings */
+    h2 {
+      color: #2C3E50; /* Dark blue for headings */
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    /* Media Queries for Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .container > div {
+        margin: 10px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav a {
+        font-size: 16px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <!-- Main Content Container -->
+  <div class="container">
+    <div>
+      <h2>Section 1</h2>
+      <p>This is the first section of the page. It contains some content.</p>
+    </div>
+    <div>
+      <h2>Section 2</h2>
+      <p>This is the second section of the page. It contains more content.</p>
+    </div>
+    <div>
+      <h2>Section 3</h2>
+      <p>This is the third section of the page. It contains even more content.</p>
+    </div>
+  </div>
+
+</body>
+</html>
